@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot - Smart HealthCare Information Hub</title>
+  <style>       
+    body {
+      background: linear-gradient(to bottom right, #fce4ec, #f3e5f5, #e1bee7); /* Nude + Soft Purple */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #6a1b9a;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul a {
+      margin: 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    nav ul a:hover {
+      color: #f8bbd0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(106, 27, 154, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #4a148c;
+      margin-bottom: 30px;
+      font-size: 2.6em;
+    }
+
+    .chatbot-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #8e24aa;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #6a1b9a;
+      transform: translateY(-2px);
+    }
+
+    .back-button:active {
+      background-color: #4a148c;
+      transform: translateY(1px);
+    }
+
+    .back-button:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(142, 36, 170, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">Browse Information</a>
+      <a href="health_collection.html" id="nav-Health-Collection">Health Collection</a>
+      <a href="ebook.html">Ebook Collection</a>
+      <a href="events.html">Events</a>
+      <a href="ai_chatbot.html">AI Chatbot</a>
+      <a href="Policy.html">Librarian Policy</a>
+    </ul>
+  </nav>
+
+  <!-- Chatbot Section -->
+  <div class="container">
+    <h1>AI Chatbot</h1>
+
+    <!-- Full-width Chatbot Image -->
+    <img class="chatbot-image" src="https://i.imgur.com/EgmoqPH.jpg" alt="AI Chatbot Image" />
+
+    <!-- Embedded Chatbot Script -->
+    <script src='https://www.noupe.com/embed/0197b725444071a9b89e3f7c4c0df02ed82d.js'></script>
+
+    <!-- Back to Homepage Button -->
+    <div class="back-link">
+      <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>

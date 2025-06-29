@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Librarian | Contact</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e6dbf2, #fdf7f4);
+      color: #333;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #e6dbf2;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-title img {
+      width: 180px;
+      border-radius: 10px;
+    }
+
+    .mission-vision {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #eee0f3;
+    }
+
+    .language-buttons button {
+      padding: 6px 12px;
+      border: none;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 2px solid #e6dbf2;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .contact-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 40px auto 10px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-left {
+      flex: 1 1 60%;
+    }
+
+    .contact-right {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .profile-photo img {
+      max-width: 140px;
+      border-radius: 12px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #6b3ea8;
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    .video-box {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 40px 45px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #6b3ea8;
+    }
+
+    .accordion {
+      background-color: #e6dbf2;
+      color: #333;
+      cursor: pointer;
+      padding: 16px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.3s ease;
+      font-size: 1.05em;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .accordion:hover {
+      background-color: #eee0f3;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      border-left: 3px solid #e6dbf2;
+      margin-bottom: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .logo-title, .contact-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo-title">
+      <img src="https://i.imgur.com/8DIzWkT.png" alt="Health Librarian Logo" />
+      <div>
+        <h1 id="site-title">Health Librarian</h1>
+
+        <!-- Pautan ke projek penuh -->
+        <p style="font-size: 0.9em; margin-top: 5px;">
+          Visit the full project at:
+          <a href="https://nurafiqahkamal.github.io/Smart-Healthcare-Information-Hub/" target="_blank" style="color: #6b3ea8; text-decoration: underline;">
+            Smart Healthcare Information Hub Library website
+          </a>
+        </p>
+
+        <div class="mission-vision">
+          <p><strong>Mission:</strong> Empower individuals by providing free, inclusive, and reliable medical information to enhance public health literacy.</p>
+          <p><strong>Vision:</strong> To be the leading trusted digital platform for accessing accurate and up-to-date health library services for all.</p>
+        </div>
+      </div>
+    </div>
+    <div class="language-buttons">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('ms')">BM</button>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Browse Information </a>
+      <a href="health_collection.html" id="nav-Health-Collection">Health Collection</a>
+      <a href="ebook.html">Ebook Collection</a>
+      <a href="events.html">Events</a>
+      <a href="ai_chatbot.html">AI Chatbot</a>
+      <a href="Policy.html">Librarian Policy</a>
+    </nav>
+  </div>
+
+  <div class="contact-top">
+    <div class="contact-left">
+      <h2>Get in Touch</h2>
+      <p>If you have any questions, suggestions, or require further assistance regarding health information services, please don't hesitate to reach out. You may contact me directly at:
+        <a class="email-link" href="mailto:arefiqahkamal@gmail.com">arefiqahkamal@gmail.com</a>
+      </p>
+      <div class="profile-text">
+        <h3>Name:</h3>
+        <p>NUR AFIQAH BINTI AHMAD KAMAL</p>
+        <p>Medical/Healthcare Librarian</p>
+        <div class="social-icons">
+         <a href="https://wa.me/60132324292" target="_blank">WhatsApp</a>
+         <a href="https://www.instagram.com/medic_allibrarian?igsh=OTdvejJvNzZ6eDBu" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="profile-photo">
+        <img src="https://drive.google.com/thumbnail?id=1uOKmZ-5htcg9TQ7s2cbdw4dPsEJi3wC6" alt="Nur Afiqah Binti Ahmad Kamal">
+      </div>
+    </div>
+  </div>
+
+  <div class="video-box">
+    <h2>HealtCare Intro</h2>
+    <iframe src="https://streamable.com/e/67r2fl" allowfullscreen></iframe>
+  </div>
+
+  <div class="container">
+    <h2>Medical Librarian Job Description</h2>
+
+    <button class="accordion">Introduction</button>
+    <div class="panel">
+      <p>
+        Medical librarians perform a key task for both healthcare professionals and patients by managing the flow of medical information. They provide high-quality health data to patients and keep doctors and other medical experts up to date on the latest advances in their specialty, ensuring effective care and superior diagnoses.
+      </p>
+    </div>
+
+    <button class="accordion">Responsibilities</button>
+    <div class="panel">
+      <ul>
+        <li>Assist in training new healthcare providers in academic settings.</li>
+        <li>Utilize print and digital data tools to support medical professionals.</li>
+        <li>Support research teams in universities or pharmaceutical companies.</li>
+        <li>Conduct outreach programs via websites, blogs, and online education.</li>
+        <li>Retrieve biomedical data for daily clinical or research needs.</li>
+        <li>Act as informationists to teach and support data usage in healthcare.</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Skills</button>
+    <div class="panel">
+      <ul>
+        <li><strong>Maintain Databases:</strong> Keep health data updated and organized.</li>
+        <li><strong>Research:</strong> Stay informed on medical practices through study.</li>
+        <li><strong>Critical Thinking:</strong> Adapt to changes and user needs.</li>
+        <li><strong>Analytical:</strong> Evaluate complex information logically.</li>
+        <li><strong>Problem Solving:</strong> Determine effective solutions for medical info needs.</li>
+        <li><strong>Reading Comprehension:</strong> Understand and share health content accurately.</li>
+        <li><strong>Communication:</strong> Work closely with healthcare teams to update them on advancements.</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Working Conditions</button>
+    <div class="panel">
+      <p>
+        Medical librarians work in hospitals, universities, pharma companies, research centers, publishers, and government agencies. Their role is vital wherever medical data is needed.
+      </p>
+      <p>
+        They may serve in high-level academic or information roles such as deans or chief information officers, and many manage digital libraries or health databases for major hospitals and online platforms.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 NUR AFIQAH | Health Librarian. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'ms') {
+        document.getElementById('site-title').textContent = 'Pustakawan Kesihatan';
+        document.getElementById('nav-home').textContent = 'Utama';
+        document.getElementById('nav-about').textContent = 'Tentang';
+        document.getElementById('nav-contact').textContent = 'Hubungi';
+      } else {
+        document.getElementById('site-title').textContent = 'Health Librarian';
+        document.getElementById('nav-home').textContent = 'Home';
+        document.getElementById('nav-about').textContent = 'About';
+        document.getElementById('nav-contact').textContent = 'Contact';
+      }
+    }
+
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

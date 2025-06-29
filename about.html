@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Browse Health Library Collection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fef7f6; /* nude */
+      color: #333;
+    }
+    header {
+      background-color: #e1bee7; /* purple light */
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      color: #6a1b9a; /* purple dark */
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: bold;
+      padding: 8px 16px;
+      background-color: #ffffff;
+      border: 2px solid #6a1b9a;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background-color: #6a1b9a;
+      color: #fff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #8e24aa; /* purple medium */
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-align: center;
+      padding: 10px 15px;
+      background-color: #ba68c8; /* soft purple button */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .card a:hover {
+      background-color: #6a1b9a;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #777;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Browse a Health Library Collection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Browse Information</a>
+      <a href="health_collection.html" id="nav-Health-Collection">Health Collection</a>
+      <a href="ebook.html">Ebook Collection</a>
+      <a href="events.html">Events</a>
+      <a href="ai_chatbot.html">AI Chatbot</a>
+      <a href="Policy.html">Librarian Policy</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <script>
+      const resources = [
+        ["Advanced Practice Nursing", "https://apn.lwwhealthlibrary.com/index.aspx"],
+        ["Anatomical Sciences", "https://anatomicalsciences.lwwhealthlibrary.com/index.aspx"],
+        ["Anesthesiology", "https://anesthesiology.lwwhealthlibrary.com/index.aspx"],
+        ["Basic Sciences", "https://basicsciences.lwwhealthlibrary.com/index.aspx"],
+        ["Board Review Series", "https://brs.lwwhealthlibrary.com/index.aspx"],
+        ["Cardiology", "https://cardiology.lwwhealthlibrary.com/index.aspx"],
+        ["Ciencias Básicas", "https://cienciasbasicas.lwwhealthlibrary.com/index.aspx"],
+        ["Clerkship", "https://clerkship.lwwhealthlibrary.com/index.aspx?rotationId=0"],
+        ["Clinical Essentials", "https://clinicalessentials.lwwhealthlibrary.com/index.aspx"],
+        ["Cornerstone Pharmacy", "https://cornerstonepharmacy.lwwhealthlibrary.com/index.aspx"],
+        ["Critical Care", "https://criticalcare.lwwhealthlibrary.com/index.aspx"],
+        ["Emergency Medicine", "https://emergency.lwwhealthlibrary.com/index.aspx"],
+        ["Exercise Science", "https://exercisescience.lwwhealthlibrary.com/index.aspx"],
+        ["Family Medicine", "https://familymedicine.lwwhealthlibrary.com/index.aspx"],
+        ["Integrated Basic and Anatomical Sciences", "https://integratedsciences.lwwhealthlibrary.com/index.aspx"],
+        ["Integrated Pharmacy", "https://integratedpharmacy.lwwhealthlibrary.com/index.aspx"],
+        ["Internal Medicine", "https://internalmedicine.lwwhealthlibrary.com/index.aspx"],
+        ["International Anatomical Sciences", "https://internationalanatomy.lwwhealthlibrary.com/index.aspx"],
+        ["International Integrated Basic and Anatomical Sciences", "https://internationalintegrated.lwwhealthlibrary.com/index.aspx"],
+        ["International Premium Basic Sciences", "https://internationalpbs.lwwhealthlibrary.com/index.aspx"],
+        ["Lippincott Advisor", "https://advisor.lwwhealthlibrary.com/index.aspx"],
+        ["Lippincott Illustrated Reviews", "https://lir.lwwhealthlibrary.com/index.aspx"],
+        ["Made Incredibly Easy!", "https://mie.lwwhealthlibrary.com/index.aspx"],
+        ["Neurology", "https://neurology.lwwhealthlibrary.com/index.aspx"],
+        ["Obstetrics & Gynecology", "https://obgyn.lwwhealthlibrary.com/index.aspx"],
+        ["Occupational Therapy", "https://ot.lwwhealthlibrary.com/index.aspx"],
+        ["Oncology", "https://oncology.lwwhealthlibrary.com/index.aspx"],
+        ["Ophthalmology", "https://ophthalmology.lwwhealthlibrary.com/index.aspx"],
+        ["Orthopaedic Surgery", "https://orthopaedics.lwwhealthlibrary.com/index.aspx"],
+        ["Osteopathic Medicine", "https://osteopathicmedicine.lwwhealthlibrary.com/index.aspx"],
+        ["PA Core Education", "https://pa-core.lwwhealthlibrary.com/index.aspx"],
+        ["PA Rotations/Specialties", "https://pa-rotations.lwwhealthlibrary.com/index.aspx?rotationId=0"],
+        ["Pathology", "https://pathology.lwwhealthlibrary.com/index.aspx"],
+        ["Pediatrics", "https://pediatrics.lwwhealthlibrary.com/index.aspx"],
+        ["Physical Therapy", "https://pt.lwwhealthlibrary.com/index.aspx"],
+        ["Premium Basic Sciences", "https://premiumbasicsciences.lwwhealthlibrary.com/index.aspx"],
+        ["Premium Pharmacy", "https://premiumpharmacy.lwwhealthlibrary.com/index.aspx"],
+        ["Psychiatry", "https://psychiatry.lwwhealthlibrary.com/index.aspx"],
+        ["Speech, Language, Hearing", "https://slh.lwwhealthlibrary.com/index.aspx"],
+        ["Surgery", "https://surgery.lwwhealthlibrary.com/index.aspx"]
+      ];
+
+      document.write(resources.map(([title, url]) => `
+        <div class="card">
+          <h3>${title}</h3>
+          <a href="${url}" target="_blank">Visit</a>
+        </div>
+      `).join(""));
+    </script>
+  </div>
+
+  <footer>
+    © 2025 Health Library Portal | Powered by NUR AFIQAH
+  </footer>
+
+ 
+  </script>
+</body>
+</html>
